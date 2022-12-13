@@ -1,0 +1,8 @@
+        perm =
+        embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+        await ctx.reply(embed=embed, mention_author=False)
+        return
+
+################################
+# A PERM-BE MEGY A HIÁNYZÓ JOG #
+################################

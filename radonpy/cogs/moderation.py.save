@@ -1,0 +1,662 @@
+
+from discord.ext import commands
+import discord
+import datetime
+import asyncio
+import random
+from main import db
+
+def convert(time):
+    pos = ["s","m","h","d"]
+    time_dict = {"s" : 1, "m" : 60, "h" : 3600, "d": 3600*24}
+    unit = time[-1]
+    if unit not in pos:
+        return -1
+    try:
+        val = int(time[:-1])
+    except:
+        return -2
+    return val * time_dict[unit]
+
+class Moderation(commands.Cog):
+    def __init__(self, client):
+        self.client = client
+
+    @commands.command(aliases=['chinfo', 'cinfo'], usage=",chinfo [#csatorna]")
+    async def channelinfo(self, ctx):
+        channel = ctx.channel
+        embed = discord.Embed(title=f"Statiszikák a **{channel.name}** csatornának", description=f"{'Kategória: {}'.format(channel.category.name) if channel.category else 'Nincs kategóriában'}")
+        embed.add_field(name="Szervere neve", value=ctx.guild.name, inline=True)
+        embed.add_field(name="Csatorna ID", value=channel.id, inline=True)
+        if channel.topic:
+            embed.add_field(name="Csatorna Téma", value=f"{channel.topic}", inline=True)
+        embed.add_field(name="Csatorna Pozíciója", value=channel.position, inline=True)
+        embed.add_field(name="Csatorna Lassítása", value=channel.slowmode_delay, inline=True)
+        embed.add_field(name="NSFW csatorna?", value=channel.is_nsfw(), inline=True)
+        embed.add_field(name="Bejelentési csatorna?", value=channel.is_news(), inline=True)
+        embed.add_field(name="Csatorna létrehozási ideje", value=channel.created_at, inline=True)
+        embed.add_field(name="Csatorna jogai", value=channel.permissions_synced, inline=True)
+        embed.add_field(name="Csatorna Hash", value=hash(channel), inline=True)
+        await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(aliases=["w"], usage=",warn [@felhasználó] (indok)")
+    async def warn(self, ctx, member: discord.Member, *, reason="Indoktalan"):
+        if ctx.author.guild_permissions.kick_members:
+            if member.id == self.client:
+                return
+            if member.id == ctx.author.id:
+                await ctx.reply("Nem tudod magadat figyelmeztetni!", mention_author=False)
+                return
+            await ctx.message.delete()
+            await ctx.reply("A figyelmeztetést elküldtem!", mention_author=False)
+            try:
+                await member.send(f"Figyelmeztetést kaptál a **{ctx.guild.name}** szerverről **{ctx.author.name}#{ctx.author.discriminator}** által! Indok: `{reason}`")
+            except:
+                await ctx.send("Mivel a felhasználó nem fogad üzeneteket, nem tudtam értesíteni!")
+        else:
+            perm = "Tagok kirúgása"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+    @commands.command()
+    async def unbanall(self, ctx):
+        if ctx.author.guild_permissions.ban_members:
+            msg = await ctx.reply(content="Kérlek várj...", mention_author=False)
+            for member in ctx.guild.bans:
+                await ctx.guild.unban(member)
+                await asyncio.sleep(2)
+            await msg.edit("Sikeresen feloldottam az összes felhasználó kitiltását!")
+        else:
+           perm = "Tagok kitiltása"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+    @commands.command()
+    async def nickall(self, ctx, *, nick):
+        if ctx.author.guild_permissions.manage_nicknames:
+            
+            msg = await ctx.reply(content="Kérlek várj...", mention_author=False)
+            for member in ctx.guild.members:
+                await member.edit(nick=nick)
+                await asyncio.sleep(2)
+            await msg.edit("Sikeresen átneveztem az összes felhasználót!")
+        else:
+            perm = "Becenevek kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+#    @commands.command(usage=",softban [@említés] (indok)")
+#    async def softban(self, ctx, member, *, reason="Nincs"):
+#        try:
+#            user = await commands.MemberConverter().convert(ctx, member)
+#            a = True
+#        except:
+#            await ctx.reply("<:radon_x:811191514482212874> Nem található ez a felhasználó a szerveren!")
+#            a = False
+#            return
+#        if a == True:
+#            bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+#            if ctx.author.guild_permissions.ban_members == False:
+#                perm = "Tagok kitiltása"
+#                embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+#                await ctx.reply(embed=embed)
+#                return
+#            elif user.id == ctx.author.id:
+#                await ctx.reply("<:radon_x:811191514482212874> Nem tilthatod ki saját magad!")
+#                return
+#            elif ctx.author.top_role <= user.top_role and user.guild_permissions.ban_members == True:
+#                await ctx.reply(f" <:radon_x:811191514482212874> {user.mention} rangjai magasabbak, vagy egyenlőek mint a tiéd, ezért nem tilthatod ki a felhasználót!")
+#                return
+#            elif not bot.top_role > user.top_role:
+#                await ctx.reply(f"<:radon_x:811191514482212874> {user.mention} rangja magasabban vannak mint a bot rangja, ezért nem tudom kitiltani őt!")
+#                return
+#            else:
+#                bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+#                if bot.guild_permissions.ban_members:
+#                    await ctx.guild.ban(user=user, reason=reason, delete_message_days=14)
+#                    try:
+#                        embed2 = discord.Embed(description=f"Ki lettél tiltva a `{ctx.guild.name}` szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`", color=ctx.message.author.top_role.color, timestamp=datetime.datetime.timestamp.utcnow())
+#                        embed2.set_author(icon_url=f"{user.avatar_url}", name=f"Kitiltás × {user.name}#{user.discriminator}")
+#                        await user.send(embed=embed2)
+#                    except:
+#                        pass
+#                    embed = discord.Embed(timestamp = datetime.datetime.utcnow(), color = ctx.author.color, description = f"`{user.name}#{user.discriminator}` ki lett tiltva a szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`")
+#                    embed.set_author(icon_url=f"{user.avatar_url}", name=f"Kitiltás × {user.name}#{user.discriminator}")
+#                    await ctx.reply(embed=embed)
+#                else:
+#                    await ctx.reply("<:radon_x:811191514482212874> Nincs elegendő jogosultságom a felhasználó kitiltásához!")
+#        else:
+#            return
+
+    @commands.command(aliases=["ld", "lock", "chlock"])
+    async def lockdown(self, ctx, channel: discord.TextChannel=None):
+        channel = channel or ctx.channel
+        if ctx.author.guild_permissions.manage_channels:
+            if ctx.guild.default_role not in channel.overwrites:
+                overwrites = {
+                ctx.guild.default_role: discord.PermissionOverwrite(send_messages=False)
+                }
+                await channel.edit(overwrites=overwrites)
+                await ctx.send(f"A csatorna zárolva! `{channel.name}`")
+                await asyncio.sleep(2)
+            elif channel.overwrites[ctx.guild.default_role].send_messages == True or channel.overwrites[ctx.guild.default_role].send_messages == None:
+                overwrites = channel.overwrites[ctx.guild.default_role]
+                overwrites.send_messages = False
+                await channel.set_permissions(ctx.guild.default_role, overwrite=overwrites)
+                await ctx.send(f"A csatorna zárolva! `{channel.name}`")
+            else:
+                overwrites = channel.overwrites[ctx.guild.default_role]
+                overwrites.send_messages = True
+                await channel.set_permissions(ctx.guild.default_role, overwrite=overwrites)
+                await ctx.send(f"Csatorna feloldva! `{channel.name}`")
+        else:
+            perm = "Csatornák kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+    @commands.command(aliases=["kidob", "kirúg", "kirug"], usage=",kick [@említés] (indok)")
+    @commands.has_guild_permissions(kick_members=True)
+    async def kick(self, ctx, member, *, reason="Indoktalan!"):
+        if ctx.author.guild_permissions.kick_members:
+            try:
+                user = await commands.MemberConverter().convert(ctx, member)
+                a = True
+            except:
+                await ctx.reply(content="<:radon_x:811191514482212874> Nem található ez a felhasználó a szerveren!", mention_author=False)
+                a = False
+                return
+            if a == True:
+                bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+                if user.id == ctx.author.id:
+                    await ctx.reply(content="<:radon_x:811191514482212874> Nem rúghatod ki saját magad!", mention_author=False)
+                    return
+                elif ctx.author.top_role <= user.top_role and user.guild_permissions.kick_members == True:
+                    await ctx.reply(content=f" <:radon_x:811191514482212874> {user.mention} rangjai magasabbak, vagy egyenlőek mint a tiéd, ezért nem rúghatod ki őt!", mention_author=False)
+                    return
+                elif not bot.top_role > user.top_role:
+                    await ctx.reply(content= f"<:radon_x:811191514482212874> {user.mention} rangja magasabban vannak mint a bot rangja, ezért nem tudom kidobni őt!", mention_author=False)
+                    return
+                else:
+                    bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+                    if bot.guild_permissions.kick_members:
+                        await ctx.guild.kick(user=user, reason=reason)
+                        try:
+                            embed2 = discord.Embed(description=f"Ki lettél rúgva a `{ctx.guild.name}` szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`", color=ctx.message.author.top_role.color, timestamp=datetime.datetime.timestamp.utcnow())
+                            embed2.set_author(icon_url=f"{user.avatar_url}", name=f"Kirúgás × {user.name}#{user.discriminator}")
+                            await user.send(embed=embed2)
+                        except:
+                            pass
+                        embed = discord.Embed(timestamp = datetime.datetime.utcnow(), color = ctx.author.color, description = f"`{user.name}#{user.discriminator}` ki lett rúgva a szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`")
+                        embed.set_author(icon_url=f"{user.avatar_url}", name=f"Kirúgás × {user.name}#{user.discriminator}")
+                        await ctx.reply(embed=embed, mention_author=False)
+                    else:
+                        await ctx.reply(content="<:radon_x:811191514482212874> Nincs elegendő jogosultságom a felhasználó kirúgásához!", mention_author=True)
+            else:
+                return
+        else:
+            perm = "Tagok kirúgása"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+    @commands.command(usage=",tempban [@említés] [idő (s|m|h|d)] (indok)")
+    async def tempban(self, ctx, member, *, ido, reason="Indoktalan"):
+        try: 
+            ido = convert(ido)
+        except: 
+            await ctx.reply(content="Helytelen időformátum", mention_author=False)
+        try:
+            user = await commands.MemberConverter().convert(ctx, member)
+            a = True
+        except:
+            await ctx.reply(content="<:radon_x:811191514482212874> Nem található ez a felhasználó a szerveren!", mention_author=True)
+            a = False
+            return
+        if a == True:
+            bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+            if ctx.author.guild_permissions.ban_members == False:
+                perm = "Tagok kitiltása"
+                embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            elif user.id == ctx.author.id:
+                await ctx.reply(content="<:radon_x:811191514482212874> Nem tilthatod ki saját magad!", mention_author=True)
+                return
+            elif ctx.author.top_role <= user.top_role and user.guild_permissions.ban_members == True:
+                await ctx.reply(content=f" <:radon_x:811191514482212874> {user.mention} rangjai magasabbak, vagy egyenlőek mint a tiéd, ezért nem tilthatod ki a felhasználót!", mention_author=False)
+                return
+            elif not bot.top_role > user.top_role:
+                await ctx.reply(content=f"<:radon_x:811191514482212874> {user.mention} rangja magasabban vannak mint a bot rangja, ezért nem tudom kitiltani őt!", mention_author=False)
+                return
+            else:
+                bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+                if bot.guild_permissions.ban_members:
+                    await ctx.guild.ban(user=user, reason=reason)
+                    try:
+                        embed2 = discord.Embed(description=f"Ki lettél tiltva a `{ctx.guild.name}` szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`", color=ctx.message.author.top_role.color, timestamp=datetime.datetime.timestamp.utcnow())
+                        embed2.set_author(icon_url=f"{user.avatar_url}", name=f"Kitiltás × {user.name}#{user.discriminator}")
+                        await user.send(embed=embed2)
+                    except:
+                        pass
+                    embed = discord.Embed(timestamp = datetime.datetime.utcnow(), color = ctx.author.color, description = f"`{user.name}#{user.discriminator}` ki lett tiltva a szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`")
+                    embed.set_author(icon_url=f"{user.avatar_url}", name=f"Kitiltás × {user.name}#{user.discriminator}")
+                    await ctx.reply(embed=embed, mention_author=False)
+                else:
+                    await ctx.reply(content="<:radon_x:811191514482212874> Nincs elegendő jogosultságom a felhasználó kitiltásához!", mention_author=False)
+        else:
+            return
+        await asyncio.sleep(ido)
+        await ctx.guild.unban(member)
+
+    @commands.command(aliases=["kitilt", "tilt", "kitiltás", "kitiltas"], usage=",ban [@említés] (indok)")
+    async def ban(self, ctx, member, *, reason="Nincs"):
+        try:
+            user = await commands.MemberConverter().convert(ctx, member)
+            a = True
+        except:
+                await ctx.reply(content="<:radon_x:811191514482212874> Nem található ez a felhasználó a szerveren!", mention_author=False)
+                a = False
+                return
+        if a == True:
+            bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+            if ctx.author.guild_permissions.ban_members == False:
+                perm = "Tagok kitiltása"
+                embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            elif user.id == ctx.author.id:
+                await ctx.reply(content="<:radon_x:811191514482212874> Nem tilthatod ki saját magad!", mention_author=False)
+                return
+            elif ctx.author.top_role <= user.top_role and user.guild_permissions.ban_members == True:
+                await ctx.reply(content=f" <:radon_x:811191514482212874> {user.mention} rangjai magasabbak, vagy egyenlőek mint a tiéd, ezért nem tilthatod ki őt!", mention_author=False)
+                return
+            elif not bot.top_role > user.top_role:
+                await ctx.reply(content=f"<:radon_x:811191514482212874> {user.mention} rangja magasabban vannak mint a bot rangja, ezért nem tudom kitiltani őt!", mention_author=False)
+                return
+            else:
+                bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+                if bot.guild_permissions.ban_members:
+                    try:
+                        embed2 = discord.Embed(description=f"Ki lettél tiltva a `{ctx.guild.name}` szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`", color=discord.Color.red(), timestamp=datetime.datetime.timestamp.utcnow())
+                        embed2.set_author(icon_url=f"{user.avatar_url}", name=f"Kitiltás × {user.name}#{user.discriminator}")
+                        await user.send(embed=embed2)
+                    except:
+                        await ctx.send("A felhasználó nem fogad privát üzeneteket, így nem tudtam értesíteni!")
+                    embed = discord.Embed(timestamp = datetime.datetime.utcnow(), color = discord.Color.red(), description = f"`{user.name}#{user.discriminator}` ki lett tiltva a szerverről `{ctx.author.name}#{ctx.author.discriminator}` által a következő indokkal: `{reason}`")
+                    embed.set_author(icon_url=f"{user.avatar_url}", name=f"Kitiltás × {user.name}#{user.discriminator}")
+                    await ctx.guild.ban(user=user, reason=reason, delete_message_days=0)
+                    await ctx.reply(embed=embed, mention_author=False)
+                else:
+                    await ctx.reply(content="<:radon_x:811191514482212874> Nincs elegendő jogosultságom a felhasználó kitiltásához!", mention_author=False)
+        else:
+            return
+
+    @commands.command(aliases=["clear", "töröl", "torol"], usage=",purge [szám]")
+    async def purge(self, ctx, number):
+        if ctx.author.guild_permissions.manage_messages == False: 
+            perm = "Üzenetek kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+        else:
+            bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+            if bot.guild_permissions.manage_messages:
+                await ctx.message.channel.purge(limit=int(number)+1)
+                embed = discord.Embed(color = ctx.author.color, title = "Törlés", description = f"{number} üzenet törölve lett.", timestamp = datetime.datetime.utcnow())
+                msg = await ctx.reply(embed = embed, mention_author=False)
+                await asyncio.sleep(5)
+                await msg.delete()
+            else:
+                embed = discord.Embed(description="Nincs jogosultságom az üzenetek törléséhez! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(emebd=embed, mention_author=False)
+
+    @commands.command(aliases=["uclear", "userclear", "userpurge"], usage=",upurge [felhasználó] [szám]")
+    async def upurge(self, ctx, member, i: int):
+        try:
+            member = await commands.MemberConverter().convert(ctx, member)
+        except:
+            embed = discord.Embed(title="Hiba történt!", description=f"Felhasználó nem található!", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+        if ctx.author.guild_permissions.manage_messages == False: 
+            
+            perm = "Üzenetek kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+        else:
+            try: member = await commands.MemberConverter().convert(ctx, member)
+            except:
+                embed = discord.Embed(title="Hiba történt!", description=f"Felhasználó nem található!", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            for member in ctx.guild, range(i):
+                await member.purge(limit=1)
+                embed = discord.Embed(color = ctx.author.color, title = "Törlés", description = f"{i} üzenet törölve lett.", timestamp = datetime.datetime.utcnow())
+                msg = await ctx.reply(embed = embed, mention_author=False)
+                await asyncio.sleep(5)
+                await msg.delete()
+
+    @commands.command(aliases=["nick", "setnick"], usage=[",nick [@említés] [új név/clear]"])
+    async def setnickname(self, ctx, member, *, nick):
+        if ctx.author.guild_permissions.manage_nicknames:
+            try:
+                member = await commands.MemberConverter().convert(ctx, member)
+            except:
+                embed = discord.Embed(title="Hiba történt!", description=f"Felhasználó nem található!", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            if len(nick) >= 32:
+                await ctx.reply(content="A becenév nem lehet több, mint 32 karakteres!", mention_author=False)
+                return
+            if member:
+                if nick == "reset" or nick == "clear":
+                    await member.edit(nick="")
+                    await ctx.reply(content="Becenév törölve!", mention_author=False)
+                    return
+                await member.edit(nick=nick)
+                await ctx.reply(content=f'Sikeresen megváltoztattam {member.mention} felhasználónak a nevét!', mention_author=False)
+            else:
+                if nick == "reset" or nick == "clear":
+                    await ctx.author.edit(nick="")
+                    await ctx.reply(content="Becenév törölve!", mention_author=False)
+                    return
+                await ctx.author.edit(nick=nick)
+                await ctx.reply(content=f'Sikeresen megváltoztattam {member.mention} felhasználónak a nevét!', mention_author=False)
+        else:
+            perm = "Becenevek kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+    @commands.command(usage=",mute <felhasználó> [indok: opcionális]")
+    async def mute(self, ctx, member, *, reason=None):
+        
+        if ctx.author.guild_permissions.kick_members:
+            try:
+                member = await commands.MemberConverter().convert(ctx, member)
+            except:
+                embed = discord.Embed(title="Hiba történt!", description=f"Felhasználó nem található!", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            guild = ctx.guild
+            mutedRole = discord.utils.get(guild.roles, name="Némított")
+            if not mutedRole:
+                mutedRole = await guild.create_role(name="Némított")
+                msg = await ctx.reply(content="Kérlek várj...", mention_author=False)
+                for channel in guild.channels:
+                    await channel.set_permissions(mutedRole, speak=False, send_messages=False, read_message_history=True, read_messages=False)
+                    await asyncio.sleep(2)
+            embed = discord.Embed(description=f"{member.mention} sikeresen le lett némítva!", colour=ctx.author.color, timestamp=datetime.datetime.utcnow())
+            embed.set_author(name=f"{str(ctx.message.author)} × Némítás", icon_url=ctx.author.avatar_url)
+            embed.add_field(name="Indok", value=reason, inline=False)
+            await msg.edit(content=None, embed=embed)
+            await member.add_roles(mutedRole, reason=reason)
+            await member.send(f"Le lettél némítva a **{guild.name}** szerveren!\n Indok: **{reason}**")
+        else:
+            perm = "Tagok kirúgása"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+    @commands.command(usage=",unmute <felhasználó>")
+    async def unmute(self, ctx, member: discord.Member):
+        if ctx.author.guild_permissions.kick_members:
+            try:
+                member = await commands.MemberConverter().convert(ctx, member)
+            except:
+                embed = discord.Embed(title="Hiba történt!", description=f"Felhasználó nem található!", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            mutedRole = discord.utils.get(ctx.guild.roles, name="Némított")
+            await member.remove_roles(mutedRole)
+            await member.send(f"A némításod fel lett oldva a **{ctx.guild.name}** szerveren!")
+            embed = discord.Embed(description=f"Sikeresen feloldva {member.mention} a némítás alól",colour=ctx.author.color)
+            embed.set_author(name=f"{str(ctx.message.author)} × Némítás feloldása", icon_url=ctx.author.avatar_url)
+            await ctx.reply(embed=embed, mention_author=False)
+        else:
+            perm = "Tagok kirúgása"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+            return
+
+    @commands.command(aliases=["felold", "tiltasfelold", "tiltásfelold"], usage=",unban [ID] (indok)")
+    async def unban(self, ctx, user):
+            if ctx.author.guild_permissions.ban_members == False: 
+                perm = "Tagok kitiltása"
+                embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+                await ctx.reply(embed=embed, mention_author=False)
+            else:
+                if user.isdigit() == False: 
+                    lista = user.split('#')
+                    if len(lista) != 2: 
+                        embed = discord.Embed(description="Nem található ilyen felhasználó a kitiltottak listáján! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                        embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                        await ctx.reply(embed=embed, mention_author=False)
+                        return
+                    else: 
+                        member_name = lista[0]
+                        member_discriminator = lista[1]
+                        banned_users = await ctx.guild.bans()
+                        asd = False
+                        for ban in banned_users:
+                            if (ban.user.name, ban.user.discriminator) == (member_name, member_discriminator):
+                                await ctx.guild.unban(ban.user)
+                                embed = discord.Embed(timestamp = datetime.datetime.utcnow(), color = ctx.author.color, description = f"`{ban.user.name}#{ban.user.discriminator}` kitiltása `{ctx.author.name}#{ctx.author.discriminator}` által feloldásra került!")
+                                embed.set_author(icon_url=f"{ban.user.avatar_url}", name=f"Kitiltás feloldása × {ban.user.name}")
+                                await ctx.reply(embed=embed, mention_author=False)
+                                asd = True
+                                await user.send(f"A kitiltásod feloldották a **{ctx.author.guild_name}** szerveren!")
+                        if asd == False:                         
+                            embed = discord.Embed(description="Nem található ilyen felhasználó a kitiltottak listáján! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                            embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                            await ctx.reply(embed=embed, mention_author=False)
+                            return
+                else:
+                    banned_users = await ctx.guild.bans()
+                    lista = [b.user.id for b in banned_users]
+                    if int(user) not in lista: 
+                        embed = discord.Embed(description="Nem található ilyen felhasználó a kitiltottak listáján! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                        embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                        await ctx.reply(embed=embed, mention_author=False)
+                        return
+                    else:
+                        user = await self.client.fetch_user(user)
+                        await ctx.guild.unban(user)
+                        embed = discord.Embed(timestamp = datetime.datetime.utcnow(), color = ctx.author.color, description = f"{user.name}#{user.discriminator} kitiltása {ctx.author.name}#{ctx.author.discriminator} által feloldásra került!")
+                        embed.set_author(icon_url=f"{user.avatar_url}", name=f"Kitiltás feloldása × {user.name}")
+                        await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(aliases=["av", "pfp"], usage=",avatar [@felhasználó]")
+    async def avatar(self, ctx, member : discord.Member):
+        embed2 = discord.Embed(title=f"{member} profilképe", color=member.color, timestamp=datetime.datetime.utcnow())
+        embed2.set_image(url=member.avatar_url)
+        await ctx.reply(embed=embed2, mention_author=False)
+
+    @commands.command(usage=",addrole [@említés] [@rang vagy rang ID]")
+    async def addrole(self, ctx, user, *, role):   
+        if ctx.author.guild_permissions.manage_roles == False: 
+            perm = "Rangok kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+        else:
+            try: user = await commands.MemberConverter().convert(ctx, user)
+            except: 
+                embed = discord.Embed(description="Nem található ilyen felhasználó a szerveren! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            try: role = await commands.RoleConverter().convert(ctx, role)
+            except:
+                embed = discord.Embed(description="Nem található ilyen rang a szerveren! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(embed = embed, mention_author=False)
+                return
+            if ctx.author.id == user.id: 
+                embed = discord.Embed(description="Nem adhatsz magadnak rangot! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            elif ctx.author.guild.owner == False:
+                if ctx.author.top_role < role: 
+                    embed = discord.Embed(description="Ez a rang magasabb mint a te rangod, ezért nem adhatod oda másnak! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                    embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                    await ctx.reply(embed=embed, mention_author=False)
+                    return
+            else:
+                pass
+            bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+            if bot.guild_permissions.manage_roles == False: 
+                embed = discord.Embed(description="Nincs jogosultságom a felhasználó kezelésére! <:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            await user.add_roles(role)
+            embed = discord.Embed(description=f":white_check_mark: {role.mention} sikeresen odaadva {user.mention} számára!", timestamp = datetime.datetime.utcnow(), color=ctx.author.color)
+            embed.set_author(name=f"Rang adás × {user.name}#{user.discriminator}", icon_url=user.avatar_url)
+            await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(usage=",removerole [@említés] [@rang vagy rang ID]")
+    async def removerole(self, ctx, user, *, role):   
+        if ctx.author.guild_permissions.manage_roles == False: 
+            perm = "Rangok kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+        else:
+            try: user = await commands.MemberConverter().convert(ctx, user)
+            except: 
+                embed = discord.Embed(description="Nem található ilyen felhasználó a szerveren!<:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            try: role = await commands.RoleConverter().convert(ctx, role)
+            except:
+                embed = discord.Embed(description="Nem található ilyen rang a szerveren!<:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.send(embed = embed, mention_author=False)
+                return
+            if ctx.author.id == user.id: 
+                embed = discord.Embed(description="Nem vehetsz le magadról rangot!<:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            elif ctx.author.guild.owner == False:
+                if ctx.author.top_role < role: 
+                    embed = discord.Embed(description="Ez a rang magasabb mint a te rangod, ezért nem veheted le másról!<:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                    embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                    await ctx.reply(embed=embed, mention_author=False)
+                    return
+            else:
+                pass
+            bot = await commands.MemberConverter().convert(ctx, str(713014602891264051))
+            if bot.guild_permissions.manage_roles == False: 
+                embed = discord.Embed(description="Nincs jogosultságom a felhasználó kezelésére!<:radon_x:811191514482212874>", color=ctx.author.color, timestamp=datetime.datetime.utcnow())
+                embed.set_author(name=f"Hiba × {ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
+                await ctx.reply(embed=embed, mention_author=False)
+                return
+            await user.remove_roles(role)
+            embed = discord.Embed(description=f":white_check_mark:{role.mention} sikeresen elvéve {user.mention}-tól/-től!", timestamp = datetime.datetime.utcnow(), color=ctx.author.color)
+            embed.set_author(name=f"Rang elvétel × {user.name}#{user.discriminator}", icon_url=user.avatar_url)
+            await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(usage=",roleall [@rang vagy rang ID]")
+    async def roleall(self, ctx, role):
+        if ctx.author.guild_permissions.manage_roles:
+            role = await commands.RoleConverter().convert(ctx, role)
+            await ctx.reply("Kérlek várj...")
+            for member in ctx.guild.members:
+                try: await member.add_roles(role)
+                except: continue
+                await asyncio.sleep(3)
+            await ctx.send(f"Sikeresen megkapta az összes felhasználó a {role.name} rangot!")
+        else:
+            perm = "Rangok kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(usage=",servericon", aliases=["sicon", "gicon", "guildpfp", "spfp", "serverpfp"])
+    async def guildicon(self, ctx):
+        embed = discord.Embed(title="Szerver Ikon", footer="Radon × Server Icon", description=f"{ctx.guild.name} szerver ikonja", color=ctx.author.color)
+        embed.set_image(url = ctx.guild.icon_url)
+        await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(usage=",dm [@említés] [üzenet]", aliases=["dmsay", "dsay", "saydm"])
+    async def dm(self, ctx, member, *, message):
+        member = await commands.MemberConverter().convert(ctx, member)
+        if not ctx.message.author.bot:
+            if ctx.author.id == member.id:
+                await ctx.reply(content="Magadnak miért akarsz üzenetet küldeni?xd", mention_author=False)
+                return
+            await member.send(f"Üzeneted érkezett {ctx.author.name}-től/tól a {ctx.guild.name} szerverről: `{message}`")
+            await ctx.message.delete()
+        else:
+            pass
+
+
+    @commands.command(usage=",removeall [@rang vagy rang ID]")
+    async def removeall(self, ctx, role):
+        if ctx.author.guild_permissions.manage_roles:
+            role = await commands.RoleConverter().convert(ctx, role)
+            await ctx.reply("Kérlek várj...")
+            for member in ctx.guild.members:
+                try: await member.remove_roles(role)
+                except: continue
+                await asyncio.sleep(3)
+            await ctx.send(f"Sikeresen elvettem az összes felhasználótól a {role.name} rangot!")
+        else:
+            perm = "Rangok kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(usage=",autorole [be/ki] [@rang vagy rang ID]")
+    async def autorole(self, ctx, option, role: discord.Role):
+        if ctx.author.guild_permissions.administrator:
+            if option == "be":
+                cursor = db.cursor()
+                cursor.execute(f"SELECT * FROM autorole WHERE guild_id={ctx.guild.id}")
+                result = cursor.fetchall()
+                if not len(result) == 0:
+                    await ctx.reply(content="Már be van kapcsolva az autorole rendszer", mention_author=False)
+                else:
+                    cursor.execute(f"INSERT INTO autorole (guild_id, role_id) VALUES ({ctx.guild.id}, {role.id})")
+                    db.commit()
+                    await ctx.reply(content="Sikeresen bekapcsoltad az autorole rendszert!", mention_author=False)
+            elif option == "ki":
+                cursor = db.cursor()
+                cursor.execute(f"SELECT * FROM autorole WHERE guild_id={ctx.guild.id}")
+                result = cursor.fetchall()
+                if not len(result) == 0:
+                    await ctx.reply(content="Már ki van kapcsolva az autorole rendszer", mention_author=False)
+                else:
+                    cursor.execute(f"DELETE FROM autorole WHERE guild_id={ctx.guild.id}")
+                    db.commit()
+                    await ctx.reply(content="Sikeresen kikapcsoltad az autorole rendszert!", mention_author=False)
+            else:
+                await ctx.reply("Nincs ilyen választási lehetőség! (be/ki)")
+        else:
+            perm = "Adminisztrátor"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+
+    @commands.command(usage=",slowmode [idő másodpercben]", aliases=["slow", "slowmode", "sm"])
+    async def lassítás(self, ctx, time:int):
+        if not ctx.author.guild_permissions.manage_channels:
+            perm = "Csatornák kezelése"
+            embed = discord.Embed(title="Hiányzó jogok", description=f"Nincs elegendő jogod a parancs végrehajtásához!\nSzükséges jog: `{perm}`", color=discord.Color.red(), timestamp=datetime.datetime.utcnow())
+            await ctx.reply(embed=embed, mention_author=False)
+        else:
+            if time == 0:
+                    await ctx.reply("Lassítás kikapcsolva")
+                    await ctx.channel.edit(slowmode_delay = 0)
+            elif time > 21600:
+                    await ctx.reply('Nem tudsz 6 óránál nagyobb lassítást beállítani!')
+                    return
+            else:
+                    await ctx.channel.edit(slowmode_delay = time)
+                    await ctx.reply(f'Lassítás beállítva {time} másodpercre.')
+
+def setup(client):
+    client.add_cog(Moderation(client))      
