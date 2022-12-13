@@ -1,0 +1,58 @@
+[2021-08-29 09:47:58,912] [INFO] [discord]: <logging.Formatter object at 0x7fa6714c4c40>
+[2021-08-29 09:47:59,013] [INFO] [discord.client]: logging in using static token
+[2021-08-29 09:47:59,454] [INFO] [discord.gateway]: Shard ID 0 has sent the IDENTIFY payload.
+[2021-08-29 09:48:01,615] [INFO] [discord.gateway]: Shard ID 0 has connected to Gateway: ["gateway-prd-main-2s4s",{"micros":2061372,"calls":["discord-sessions-blue-prd-2-133",{"micros":2059486,"calls":["start_session",{"micros":72241,"calls":["api-prd-main-5v3n",{"micros":67380,"calls":["get_user",{"micros":9065},"add_authorized_ip",{"micros":5820},"get_guilds",{"micros":16103},"coros_wait",{"micros":0}]}]},"guilds_connect",{"micros":90,"calls":[]},"presence_connect",{"micros":2,"calls":[]}]}]}] (Session ID: 10825d88586773a68d8959f9331fbd34).
+[2021-08-29 09:48:08,366] [WARNING] [discord.gateway]: WebSocket in shard ID 0 is ratelimited, waiting 59.87 seconds
+[2021-08-29 09:49:14,505] [WARNING] [discord.gateway]: WebSocket in shard ID 0 is ratelimited, waiting 60.00 seconds
+[2021-08-29 09:50:20,772] [WARNING] [discord.gateway]: WebSocket in shard ID 0 is ratelimited, waiting 59.90 seconds
+[2021-08-29 10:04:08,549] [WARNING] [discord.gateway]: Shard ID 0 heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "main.py", line 39, in <module>
+    client.run("NzEzMDE0NjAyODkxMjY0MDUx.XsZ8mA.UDSc2dTj_dmsZWj3Ul1vb3_32_I")
+  File "/usr/local/lib/python3.8/dist-packages/discord/client.py", line 713, in run
+    loop.run_forever()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 570, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1859, in _run_once
+    handle._run()
+  File "/usr/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.8/dist-packages/discord/client.py", line 343, in _run_event
+    await coro(*args, **kwargs)
+  File "/root/radon/radongc/cogs/globalchat.py", line 376, in on_message
+    await send1(message=message, webhooks=webhooks)
+  File "/root/radon/radongc/cogs/globalchat.py", line 44, in send1
+    await xd.post(
+  File "/usr/local/lib/python3.8/dist-packages/discordwebhook/discordwebhook.py", line 39, in post
+    return requests.post(
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1344, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3/dist-packages/urllib3/contrib/pyopenssl.py", line 313, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/OpenSSL/SSL.py", line 1821, in recv_into
+    result = _lib.SSL_read(self._ssl, buf, nbytes)
+
+[2021-08-29 10:41:24,373] [INFO] [discord.client]: Cleaning up tasks.
+[2021-08-29 10:41:24,374] [INFO] [discord.client]: Cleaning up after 2 tasks.
+[2021-08-29 10:41:24,476] [INFO] [discord.client]: All tasks finished cancelling.
+[2021-08-29 10:41:24,476] [INFO] [discord.client]: Closing the event loop.

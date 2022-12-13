@@ -1,0 +1,1 @@
+{"name":"'+ctx.guild.name+'", "icon":"https://cdn.radonbot.hu/backups/icons/'+rand+'.png", "emojis":[{"emojinév":"emojiképurl"}, {"emojinév2":"emojiképurl2"}], "roles":[{"rangnév1":{"color":"rangszín", "perms":"jogokszámban"}}, {"rangnév2":{"color":"rangszín", "perms":"jogokszámban"}}], "banner":"bannerképurl", "invback":"meghívóháttérképurl"}
