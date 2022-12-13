@@ -1,0 +1,1964 @@
+[
+    {
+        "role_name": "helper",
+        "role_id": 815298805444247574,
+        "emoji": "\u2705",
+        "message_id": 815299933527605251
+    },
+    {
+        "role_name": "helper",
+        "role_id": 815298805444247574,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815314656456998923
+    },
+    {
+        "role_name": "helper",
+        "role_id": 815298805444247574,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815316871627800577
+    },
+    {
+        "role_name": "helper",
+        "role_id": 815298805444247574,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815316992377880606
+    },
+    {
+        "role_name": "helper",
+        "role_id": 815298805444247574,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815319490153414657
+    },
+    {
+        "role_name": "\u00faj rang",
+        "role_id": 812428907956535348,
+        "emoji": "<a:boostingtop:812296038807371776>",
+        "message_id": 815320511809847358
+    },
+    {
+        "role_name": "Felhaszn\u00e1l\u00f3",
+        "role_id": 806242050973761596,
+        "emoji": "\u2705",
+        "message_id": 815487920197599234
+    },
+    {
+        "role_name": "Felhaszn\u00e1l\u00f3",
+        "role_id": 806242050973761596,
+        "emoji": "\u2705",
+        "message_id": 815488905029615639
+    },
+    {
+        "role_name": "Python",
+        "role_id": 815250976222871562,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815489998705917974
+    },
+    {
+        "role_name": "Python",
+        "role_id": 815250976222871562,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815490118433505331
+    },
+    {
+        "role_name": "JavaScript",
+        "role_id": 815250895264284732,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815490232937086977
+    },
+    {
+        "role_name": "Html",
+        "role_id": 815251009936556043,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815490378480353301
+    },
+    {
+        "role_name": "C#",
+        "role_id": 815251052713607188,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815490505814835221
+    },
+    {
+        "role_name": "php",
+        "role_id": 815251106039988234,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 815490657422147614
+    },
+    {
+        "role_name": "\u27a4\u300e\ud83d\ude03\u300fViccesJ\u00f3zsi",
+        "role_id": 797195110323322880,
+        "emoji": "\u26ab",
+        "message_id": 815639123309756466
+    },
+    {
+        "role_name": "Kezd\u0151 Programoz\u00f3",
+        "role_id": 814797837229228043,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 817003547346075658
+    },
+    {
+        "role_name": "Javascript",
+        "role_id": 817003726471954463,
+        "emoji": "\ud83d\udfe8",
+        "message_id": 817003993665372200
+    },
+    {
+        "role_name": "Python",
+        "role_id": 817003748865343519,
+        "emoji": "\ud83d\udfe6",
+        "message_id": 817004066206515201
+    },
+    {
+        "role_name": "Bot For Desgner Discord",
+        "role_id": 817043903500517386,
+        "emoji": "\ud83e\udd16",
+        "message_id": 817155102846615583
+    },
+    {
+        "role_name": "Programoz\u00f3",
+        "role_id": 817174333680123945,
+        "emoji": "\ud83d\udcbb",
+        "message_id": 817175249291968562
+    },
+    {
+        "role_name": "Programoz\u00f3",
+        "role_id": 817174333680123945,
+        "emoji": "\ud83d\udda5\ufe0f",
+        "message_id": 817338399811829791
+    },
+    {
+        "role_name": "Programoz\u00f3",
+        "role_id": 817174333680123945,
+        "emoji": "\ud83d\udda5\ufe0f",
+        "message_id": 817338699775475732
+    },
+    {
+        "role_name": "Bot",
+        "role_id": 814797866861199371,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 817347573437300746
+    },
+    {
+        "role_name": "\ud83d\udc66\u2022\u300bFi\u00fa",
+        "role_id": 817413139834470441,
+        "emoji": "\ud83d\udc66",
+        "message_id": 817414938737639434
+    },
+    {
+        "role_name": "\ud83d\udc67\u2022\u300bL\u00e1ny",
+        "role_id": 817413139850985492,
+        "emoji": "\ud83d\udc67",
+        "message_id": 817415096368103434
+    },
+    {
+        "role_name": "\ud83d\udd22\u2022\u300b10-12",
+        "role_id": 817413139884277820,
+        "emoji": "\ud83d\udd22",
+        "message_id": 817415949945667634
+    },
+    {
+        "role_name": "\ud83d\udd22\u2022\u300b12-14",
+        "role_id": 817413140508573706,
+        "emoji": "\ud83d\udd22",
+        "message_id": 817416036348723210
+    },
+    {
+        "role_name": "\ud83d\udd22\u2022\u300b10-12",
+        "role_id": 817413139884277820,
+        "emoji": "\ud83d\udd22",
+        "message_id": 817416178501681153
+    },
+    {
+        "role_name": "\ud83d\udd22\u2022\u300b12-14",
+        "role_id": 817413140508573706,
+        "emoji": "\ud83d\udd22",
+        "message_id": 817416275029524530
+    },
+    {
+        "role_name": "\ud83d\udd22\u2022\u300b14-16",
+        "role_id": 817413140681457714,
+        "emoji": "\ud83d\udd22",
+        "message_id": 817416387877142588
+    },
+    {
+        "role_name": "\ud83d\udd22\u2022\u300b16-18+",
+        "role_id": 817413144070717463,
+        "emoji": "\ud83d\udd22",
+        "message_id": 817416486380503044
+    },
+    {
+        "role_name": "18+",
+        "role_id": 817700462144520193,
+        "emoji": "\u2705",
+        "message_id": 817700865041104896
+    },
+    {
+        "role_name": "HozzEgyLiterP\u00e1link\u00e1tEr",
+        "role_id": 815298805444247574,
+        "emoji": "\ud83d\udc10",
+        "message_id": 818929252267196464
+    },
+    {
+        "role_name": "HozzEgyLiterP\u00e1link\u00e1tEr",
+        "role_id": 815298805444247574,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 819193358244904971
+    },
+    {
+        "role_name": "Anonimbot support hasznalat",
+        "role_id": 819525356426887168,
+        "emoji": "<:windowslogo:774273168684613662>",
+        "message_id": 819525640918532126
+    },
+    {
+        "role_name": "\ud83d\udd25 Szavaz\u00e1s ping",
+        "role_id": 821394152502853644,
+        "emoji": "\ud83d\udd25",
+        "message_id": 821394422712893471
+    },
+    {
+        "role_name": "\ud83d\udd25 H\u00edrek ping",
+        "role_id": 821394245175738368,
+        "emoji": "\ud83d\udd25",
+        "message_id": 821394505156395019
+    },
+    {
+        "role_name": "\ud83d\udd25 Vide\u00f3k ping",
+        "role_id": 821394273185693727,
+        "emoji": "\ud83d\udd25",
+        "message_id": 821394551595728946
+    },
+    {
+        "role_name": "\u300a\u2753\u300bqotd Ping",
+        "role_id": 821494104906268762,
+        "emoji": "\ud83d\udd25",
+        "message_id": 821494831847047199
+    },
+    {
+        "role_name": "\u300a\u2753\u300bqotd Ping",
+        "role_id": 821494104906268762,
+        "emoji": "\ud83d\udd25",
+        "message_id": 821495043562799164
+    },
+    {
+        "role_name": "[ Eventek ping ]",
+        "role_id": 822020883505217546,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 822021017073090560
+    },
+    {
+        "role_name": "Muted",
+        "role_id": 810466873728565258,
+        "emoji": "<:heh:783746278710050817>",
+        "message_id": 822389108747927552
+    },
+    {
+        "role_name": "Sheldon Cooper",
+        "role_id": 822387071003787275,
+        "emoji": "\u2705",
+        "message_id": 822390359433674764
+    },
+    {
+        "role_name": "Sheldon Cooper",
+        "role_id": 822387071003787275,
+        "emoji": "\u2705",
+        "message_id": 822390823189741568
+    },
+    {
+        "role_name": "Sheldon Cooper",
+        "role_id": 822387071003787275,
+        "emoji": "\u2705",
+        "message_id": 822391096209833995
+    },
+    {
+        "role_name": "Amy Farrah Fowler",
+        "role_id": 822387750257819658,
+        "emoji": "\u2705",
+        "message_id": 822391163117502474
+    },
+    {
+        "role_name": "Amy Farrah Fowler",
+        "role_id": 822387750257819658,
+        "emoji": "\u2705",
+        "message_id": 822391315966590988
+    },
+    {
+        "role_name": "Howard",
+        "role_id": 822387747620388874,
+        "emoji": "\u2705",
+        "message_id": 822391450062028831
+    },
+    {
+        "role_name": "Penny Hofstadter",
+        "role_id": 822387207931035658,
+        "emoji": "\u2705",
+        "message_id": 822391629725827084
+    },
+    {
+        "role_name": "Leonard",
+        "role_id": 822387443466633217,
+        "emoji": "\u2705",
+        "message_id": 822391760717086741
+    },
+    {
+        "role_name": "Koothrappali",
+        "role_id": 822387555840294953,
+        "emoji": "\u2705",
+        "message_id": 822391970445525002
+    },
+    {
+        "role_name": "Bernadette",
+        "role_id": 822387747620782120,
+        "emoji": "\u2705",
+        "message_id": 822392158870962176
+    },
+    {
+        "role_name": "Sz\u00e9p T\u00fcrkiz Rang",
+        "role_id": 811526852303781888,
+        "emoji": "\ud83d\udd35",
+        "message_id": 822403335784890370
+    },
+    {
+        "role_name": "Piros",
+        "role_id": 811530946356314163,
+        "emoji": "\ud83d\udd34",
+        "message_id": 822403490722218005
+    },
+    {
+        "role_name": "Piros",
+        "role_id": 811530946356314163,
+        "emoji": "\ud83d\udd34",
+        "message_id": 822403709945380924
+    },
+    {
+        "role_name": "Z\u00f6ld",
+        "role_id": 811531403291525120,
+        "emoji": "\ud83d\udfe2",
+        "message_id": 822403911423361025
+    },
+    {
+        "role_name": "S\u00e1rga",
+        "role_id": 811531268423417859,
+        "emoji": "\ud83d\udfe1",
+        "message_id": 822404160426999809
+    },
+    {
+        "role_name": "K\u00e9k",
+        "role_id": 811531534489616384,
+        "emoji": "\ud83d\udfe6",
+        "message_id": 822404467013320726
+    },
+    {
+        "role_name": "Narancs",
+        "role_id": 811532881507123223,
+        "emoji": "\ud83d\udfe0",
+        "message_id": 822404752141713419
+    },
+    {
+        "role_name": "Lila",
+        "role_id": 811533030442532874,
+        "emoji": "\ud83d\udfe3",
+        "message_id": 822404862373134336
+    },
+    {
+        "role_name": "15",
+        "role_id": 822085968441638912,
+        "emoji": "\u2705",
+        "message_id": 822776490063691806
+    },
+    {
+        "role_name": "16",
+        "role_id": 822085994270294084,
+        "emoji": "\u2705",
+        "message_id": 822776572457123890
+    },
+    {
+        "role_name": "17",
+        "role_id": 822086021541134377,
+        "emoji": "\u2705",
+        "message_id": 822776639459950612
+    },
+    {
+        "role_name": "18",
+        "role_id": 822086048129482762,
+        "emoji": "\u2705",
+        "message_id": 822776719849160705
+    },
+    {
+        "role_name": "19",
+        "role_id": 822086076369862666,
+        "emoji": "\u2705",
+        "message_id": 822776789310505030
+    },
+    {
+        "role_name": "20",
+        "role_id": 822086102185803807,
+        "emoji": "\u2705",
+        "message_id": 822776852874919956
+    },
+    {
+        "role_name": "21",
+        "role_id": 822086127660826634,
+        "emoji": "\u2705",
+        "message_id": 822776916754169887
+    },
+    {
+        "role_name": "22",
+        "role_id": 822086152382316574,
+        "emoji": "\u2705",
+        "message_id": 822776983682809868
+    },
+    {
+        "role_name": "23",
+        "role_id": 822086176750960681,
+        "emoji": "\u2705",
+        "message_id": 822777064070447104
+    },
+    {
+        "role_name": "24",
+        "role_id": 822086202257702912,
+        "emoji": "\u2705",
+        "message_id": 822777136191897641
+    },
+    {
+        "role_name": "Gamer",
+        "role_id": 822777939031490560,
+        "emoji": "\u2705",
+        "message_id": 822778096741777419
+    },
+    {
+        "role_name": "Hulk",
+        "role_id": 822082768342614026,
+        "emoji": "\u2705",
+        "message_id": 822785715594330143
+    },
+    {
+        "role_name": "Superman",
+        "role_id": 822082979010445312,
+        "emoji": "\u2705",
+        "message_id": 822786102725050378
+    },
+    {
+        "role_name": "Groot",
+        "role_id": 822082884340809728,
+        "emoji": "\u2705",
+        "message_id": 822786214359859230
+    },
+    {
+        "role_name": "Thor",
+        "role_id": 822082841848446996,
+        "emoji": "\u2705",
+        "message_id": 822786386477973544
+    },
+    {
+        "role_name": "Amerika Kapit\u00e1ny",
+        "role_id": 822084043826135120,
+        "emoji": "\u2705",
+        "message_id": 822786609942495252
+    },
+    {
+        "role_name": "P\u00f3kember",
+        "role_id": 822083018822778901,
+        "emoji": "\u2705",
+        "message_id": 822786690951282699
+    },
+    {
+        "role_name": "Vasember",
+        "role_id": 822082925243400243,
+        "emoji": "\u2705",
+        "message_id": 822786777676120105
+    },
+    {
+        "role_name": "Sonic",
+        "role_id": 822787098460815371,
+        "emoji": "\u2705",
+        "message_id": 822787277826424843
+    },
+    {
+        "role_name": "Fi\u00fa",
+        "role_id": 822828801649016852,
+        "emoji": "\u2705",
+        "message_id": 822829035121016872
+    },
+    {
+        "role_name": "L\u00e1ny",
+        "role_id": 822828892275998750,
+        "emoji": "\u2705",
+        "message_id": 822829257461596260
+    },
+    {
+        "role_name": "Film Ping",
+        "role_id": 822932097228472332,
+        "emoji": "\u2705",
+        "message_id": 822932549374181376
+    },
+    {
+        "role_name": "tag",
+        "role_id": 823137751897210911,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 823138075957133402
+    },
+    {
+        "role_name": "Javascript",
+        "role_id": 823140620762742784,
+        "emoji": "\ud83d\udfe8",
+        "message_id": 823141142186033155
+    },
+    {
+        "role_name": "Python",
+        "role_id": 823140686513176597,
+        "emoji": "\ud83d\udfe9",
+        "message_id": 823141307903377408
+    },
+    {
+        "role_name": "tag",
+        "role_id": 823137751897210911,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 823143461061394452
+    },
+    {
+        "role_name": "Javascript",
+        "role_id": 823140620762742784,
+        "emoji": "\ud83d\udfe8",
+        "message_id": 823143854962245682
+    },
+    {
+        "role_name": "Python",
+        "role_id": 823140686513176597,
+        "emoji": "\ud83d\udfe9",
+        "message_id": 823144207111290910
+    },
+    {
+        "role_name": "Fekete",
+        "role_id": 811577043970949140,
+        "emoji": "\u26ab",
+        "message_id": 823262370847653918
+    },
+    {
+        "role_name": "Partner ping",
+        "role_id": 810459878485000213,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 823443665199824906
+    },
+    {
+        "role_name": "Le\u00e1ll\u00e1s ping",
+        "role_id": 810459948138889228,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 823443936290013235
+    },
+    {
+        "role_name": "Changelog ping",
+        "role_id": 810460026606714881,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 823444095980666900
+    },
+    {
+        "role_name": "Nyerem\u00e9nyj\u00e1t\u00e9k ping",
+        "role_id": 812784701202628628,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 823444347038728233
+    },
+    {
+        "role_name": "\ud83d\udcbbGamer\ud83d\udcbb",
+        "role_id": 817343658062774273,
+        "emoji": "\ud83d\udcfa",
+        "message_id": 823575511841505321
+    },
+    {
+        "role_name": "\ud83d\ude99Rocket League\ud83d\ude99",
+        "role_id": 823576091238465567,
+        "emoji": "\u2705",
+        "message_id": 823578030307672086
+    },
+    {
+        "role_name": "\ud83d\ude81Warzone\ud83d\ude81",
+        "role_id": 823577310249877564,
+        "emoji": "\u2705",
+        "message_id": 823578296913494036
+    },
+    {
+        "role_name": "\ud83d\udc34Red Dead Redemption\ud83d\udc34",
+        "role_id": 823576645922455653,
+        "emoji": "\u2705",
+        "message_id": 823578668781010946
+    },
+    {
+        "role_name": "\ud83d\udc36Watch Dogs\ud83d\udc36",
+        "role_id": 823577700522000435,
+        "emoji": "\u2705",
+        "message_id": 823578820304044124
+    },
+    {
+        "role_name": "\ud83d\ude94GTA\ud83d\ude94",
+        "role_id": 823576293341397044,
+        "emoji": "\u2705",
+        "message_id": 823579025057906688
+    },
+    {
+        "role_name": "\ud83d\ude9cFarming Simulator\ud83d\ude9c",
+        "role_id": 823577499039432704,
+        "emoji": "\u2705",
+        "message_id": 823579184961421362
+    },
+    {
+        "role_name": "\ud83e\ude83Assasin\ud83e\ude83",
+        "role_id": 823577144503435274,
+        "emoji": "\u2705",
+        "message_id": 823579523362717757
+    },
+    {
+        "role_name": "tag",
+        "role_id": 765632942462337105,
+        "emoji": "\u2705",
+        "message_id": 823855859028721675
+    },
+    {
+        "role_name": "Programoz\u00f3",
+        "role_id": 817174333680123945,
+        "emoji": "\ud83d\udfe9",
+        "message_id": 823856119607722004
+    },
+    {
+        "role_name": "18+",
+        "role_id": 817700462144520193,
+        "emoji": "\ud83d\udfe5",
+        "message_id": 823856316052144178
+    },
+    {
+        "role_name": "Anonimbot support hasznalat",
+        "role_id": 819525356426887168,
+        "emoji": "<:windowslogo:774273168684613662>",
+        "message_id": 823856503760224346
+    },
+    {
+        "role_name": "Radon",
+        "role_id": 824021382839926835,
+        "emoji": "\ud83d\ude33",
+        "message_id": 824175978707681301
+    },
+    {
+        "role_name": "VIP",
+        "role_id": 822061024693452848,
+        "emoji": "\u2705",
+        "message_id": 824339099828617266
+    },
+    {
+        "role_name": "Akt\u00edv Sp\u00e1rtaiak",
+        "role_id": 824342944277463051,
+        "emoji": "\u2705",
+        "message_id": 824343319505010696
+    },
+    {
+        "role_name": "\u3021\ud83c\udf1f\u3021V.I.P.",
+        "role_id": 822061024693452848,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 825049081944342538
+    },
+    {
+        "role_name": "Le\u00e1ll\u00e1s ping",
+        "role_id": 810459948138889228,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 825807739036106812
+    },
+    {
+        "role_name": "Partner ping",
+        "role_id": 810459878485000213,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 825808003562209290
+    },
+    {
+        "role_name": "Changelog ping",
+        "role_id": 810460026606714881,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 825808208987291720
+    },
+    {
+        "role_name": "Nyerem\u00e9nyj\u00e1t\u00e9k ping",
+        "role_id": 812784701202628628,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 825808336259252234
+    },
+    {
+        "role_name": "Partner ping",
+        "role_id": 810459878485000213,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 825808877781516329
+    },
+    {
+        "role_name": "Changelog ping",
+        "role_id": 810460026606714881,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 825809061369872424
+    },
+    {
+        "role_name": "Nyerem\u00e9nyj\u00e1t\u00e9k ping",
+        "role_id": 812784701202628628,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 825809174763274240
+    },
+    {
+        "role_name": "Le\u00e1ll\u00e1s ping",
+        "role_id": 810459948138889228,
+        "emoji": "\u2705",
+        "message_id": 825818031393472572
+    },
+    {
+        "role_name": "Partner ping",
+        "role_id": 810459878485000213,
+        "emoji": "\u2705",
+        "message_id": 825818189974732810
+    },
+    {
+        "role_name": "Changelog ping",
+        "role_id": 810460026606714881,
+        "emoji": "\u2705",
+        "message_id": 825818301212786698
+    },
+    {
+        "role_name": "Nyerem\u00e9nyj\u00e1t\u00e9k ping",
+        "role_id": 812784701202628628,
+        "emoji": "\u2705",
+        "message_id": 825818386264883240
+    },
+    {
+        "role_name": "H\u00edr ping",
+        "role_id": 828998443149688873,
+        "emoji": "\u2705",
+        "message_id": 828999287941103687
+    },
+    {
+        "role_name": "Bot-update ping",
+        "role_id": 828998544861167617,
+        "emoji": "\u2705",
+        "message_id": 828999491306651690
+    },
+    {
+        "role_name": "Daily-covid ping",
+        "role_id": 828998766676803666,
+        "emoji": "\u2705",
+        "message_id": 828999679752667136
+    },
+    {
+        "role_name": "Giveaway ping",
+        "role_id": 828998654861115422,
+        "emoji": "\u2705",
+        "message_id": 828999842696003656
+    },
+    {
+        "role_name": "Partner ping",
+        "role_id": 828998946603925516,
+        "emoji": "\u2705",
+        "message_id": 829000168467857509
+    },
+    {
+        "role_name": "J\u00e1t\u00e9kos",
+        "role_id": 792864373718122557,
+        "emoji": "\u2705",
+        "message_id": 830188107474403369
+    },
+    {
+        "role_name": "[Ping]",
+        "role_id": 804789847704731659,
+        "emoji": "<:like:810502473662857227>",
+        "message_id": 831463577670909962
+    },
+    {
+        "role_name": "[Ping]",
+        "role_id": 804789847704731659,
+        "emoji": "<:like:810502473662857227>",
+        "message_id": 831466121655091211
+    },
+    {
+        "role_name": "[Ping]",
+        "role_id": 804789847704731659,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 831469424279683082
+    },
+    {
+        "role_name": "J\u00e1t\u00e9kos",
+        "role_id": 829711468534562837,
+        "emoji": "\u2705",
+        "message_id": 832192728438669322
+    },
+    {
+        "role_name": "[\ud83d\udccd] H\u00edrek ping",
+        "role_id": 774329786151338004,
+        "emoji": "<:spongebob:804741406047600703>",
+        "message_id": 832253718493790259
+    },
+    {
+        "role_name": "[\ud83d\udccd] Nyerem\u00e9nyj\u00e1t\u00e9k ping",
+        "role_id": 774329628470673439,
+        "emoji": "<:muted:804591077801328680>",
+        "message_id": 832253898051551233
+    },
+    {
+        "role_name": "[\ud83d\udda4] Fi\u00fa",
+        "role_id": 796423117563887666,
+        "emoji": "<:kekw:804425069072744459>",
+        "message_id": 832254220904038480
+    },
+    {
+        "role_name": "[\ud83d\udc9c] L\u00e1ny",
+        "role_id": 796423380286570518,
+        "emoji": "<:Twich:774542932962312202>",
+        "message_id": 832254400470712330
+    },
+    {
+        "role_name": "[\ud83d\udd34] Piros",
+        "role_id": 769084698349273098,
+        "emoji": "\ud83d\udd34",
+        "message_id": 832254709330608138
+    },
+    {
+        "role_name": "[\u2705] Z\u00f6ld",
+        "role_id": 769084781567803393,
+        "emoji": "\ud83d\udfe2",
+        "message_id": 832254925483802684
+    },
+    {
+        "role_name": "[\ud83d\udd35] K\u00e9k",
+        "role_id": 769084860773171241,
+        "emoji": "\ud83d\udd35",
+        "message_id": 832255081742204979
+    },
+    {
+        "role_name": "[\u26aa] Feh\u00e9r",
+        "role_id": 769085054827626506,
+        "emoji": "\u26aa",
+        "message_id": 832255260189392927
+    },
+    {
+        "role_name": "[\ud83d\udd36] S\u00e1rga",
+        "role_id": 769084965677170719,
+        "emoji": "\ud83d\udfe1",
+        "message_id": 832255562891657216
+    },
+    {
+        "role_name": "[\u26ab] Sz\u00fcrke",
+        "role_id": 769085138582765599,
+        "emoji": "\u26ab",
+        "message_id": 832255921547771984
+    },
+    {
+        "role_name": "[\ud83c\udfae] Minecraft j\u00e1t\u00e9kos",
+        "role_id": 769087160883871754,
+        "emoji": "<:Minecraft_Pe:779043452422848574>",
+        "message_id": 832256135738163230
+    },
+    {
+        "role_name": "[\ud83c\udfae] Fortnite j\u00e1t\u00e9kos",
+        "role_id": 769087087847669810,
+        "emoji": "<:Fortnite:832256229740511243>",
+        "message_id": 832256388079943750
+    },
+    {
+        "role_name": "[\ud83c\udfae] Bralw Stars j\u00e1t\u00e9kos",
+        "role_id": 769087004439871500,
+        "emoji": "<:Bralw_Stars:774542376366374923>",
+        "message_id": 832256549354733579
+    },
+    {
+        "role_name": "[\ud83c\udfae] Among us j\u00e1t\u00e9kos",
+        "role_id": 769087240507752458,
+        "emoji": "<:Among_us:769510886213550110>",
+        "message_id": 832256710189383730
+    },
+    {
+        "role_name": "[\ud83d\udd1e] 18+",
+        "role_id": 764364779825135626,
+        "emoji": "\ud83d\udd1e",
+        "message_id": 832267574754148374
+    },
+    {
+        "role_name": "\u2022 Tulaj-Helyettes",
+        "role_id": 831678903999135754,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 832677377224999032
+    },
+    {
+        "role_name": "\u2022 H\u00edrek",
+        "role_id": 832326703841017887,
+        "emoji": "\ud83d\udcd6",
+        "message_id": 832692018438209546
+    },
+    {
+        "role_name": "\u2022 Tulaj-Helyettes",
+        "role_id": 831678903999135754,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833012585741025350
+    },
+    {
+        "role_name": "\u2022 Teljes hozz\u00e1f\u00e9r\u00e9s(*)",
+        "role_id": 831669776736059403,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833012796866297896
+    },
+    {
+        "role_name": "\u2022 Tulajdonos",
+        "role_id": 831678626835595266,
+        "emoji": "\ud83e\udd14",
+        "message_id": 833012816084467743
+    },
+    {
+        "role_name": "\u2022 Discord Botok",
+        "role_id": 831684538232733768,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833013093600198687
+    },
+    {
+        "role_name": "\u2022 Tulajdonos",
+        "role_id": 831678626835595266,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833013261770948648
+    },
+    {
+        "role_name": "\u2022 Tulaj-Helyettes",
+        "role_id": 831678903999135754,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833013297871585281
+    },
+    {
+        "role_name": "\u2022 Manager",
+        "role_id": 831678890963238962,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833053596199157790
+    },
+    {
+        "role_name": "\u2022 Teljes hozz\u00e1f\u00e9r\u00e9s BOTOKNAK",
+        "role_id": 831688711539654677,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833054333729767474
+    },
+    {
+        "role_name": "\u2022 Manager",
+        "role_id": 831678890963238962,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833055515977580605
+    },
+    {
+        "role_name": "\u2022 Tulaj-Helyettes",
+        "role_id": 831678903999135754,
+        "emoji": "\ud83d\udc0d",
+        "message_id": 833055565034291210
+    },
+    {
+        "role_name": "\u2022 Teljes hozz\u00e1f\u00e9r\u00e9s(*)",
+        "role_id": 831669776736059403,
+        "emoji": "\ud83e\udd16",
+        "message_id": 833055946389323796
+    },
+    {
+        "role_name": "\u2022 Teljes hozz\u00e1f\u00e9r\u00e9s BOTOKNAK",
+        "role_id": 831688711539654677,
+        "emoji": "\ud83e\udd2e",
+        "message_id": 833056716769329152
+    },
+    {
+        "role_name": "\u2022 Teljes hozz\u00e1f\u00e9r\u00e9s BOTOKNAK",
+        "role_id": 831688711539654677,
+        "emoji": "\ud83e\udd2e",
+        "message_id": 833056762407682060
+    },
+    {
+        "role_name": "\u2022 VIP",
+        "role_id": 831683614692474901,
+        "emoji": "\ud83d\ude42",
+        "message_id": 833057294727118869
+    },
+    {
+        "role_name": "[Tag]",
+        "role_id": 800421955248324678,
+        "emoji": "\ud83d\udcf0",
+        "message_id": 833356932965990401
+    },
+    {
+        "role_name": "[Tag]",
+        "role_id": 800421955248324678,
+        "emoji": "\ud83d\udcf0",
+        "message_id": 833359175367000094
+    },
+    {
+        "role_name": "h\u00edrek ping",
+        "role_id": 833623956597768203,
+        "emoji": "\ud83c\udd95",
+        "message_id": 833624501735522324
+    },
+    {
+        "role_name": "bot h\u00edrek ping",
+        "role_id": 833623872485457921,
+        "emoji": "\ud83e\udd16",
+        "message_id": 833624755692765194
+    },
+    {
+        "role_name": "giveaway ping",
+        "role_id": 833624040320925746,
+        "emoji": "\ud83e\udd73",
+        "message_id": 833626150546833428
+    },
+    {
+        "role_name": "partner ping",
+        "role_id": 833623780794171393,
+        "emoji": "\ud83c\uddf5",
+        "message_id": 833628868987453440
+    },
+    {
+        "role_name": "Mezei Cig\u00e1nyok \ud83d\udc68\ud83c\udffe\u200d\ud83c\udf3e",
+        "role_id": 799572816256565269,
+        "emoji": "\ud83d\udc7b",
+        "message_id": 834465986580971600
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 834490544502865920,
+        "emoji": "\u2705",
+        "message_id": 834498191323299850
+    },
+    {
+        "role_name": "Members",
+        "role_id": 834509377838776321,
+        "emoji": "\u2705",
+        "message_id": 834520924601974794
+    },
+    {
+        "role_name": "T\u00fasz",
+        "role_id": 834701043249840138,
+        "emoji": "\u2705",
+        "message_id": 834711339150344245
+    },
+    {
+        "role_name": "Helsinki \ud83d\udcb8",
+        "role_id": 834703024328015913,
+        "emoji": "\ud83d\udd35",
+        "message_id": 834716739921117194
+    },
+    {
+        "role_name": "Helsinki \ud83d\udcb8",
+        "role_id": 834703024328015913,
+        "emoji": "\ud83d\udc99",
+        "message_id": 834716959173771266
+    },
+    {
+        "role_name": "Oslo \ud83d\udcb0",
+        "role_id": 834703025347887114,
+        "emoji": "\ud83d\udd35",
+        "message_id": 834717124986798123
+    },
+    {
+        "role_name": "Lisszaboa \ud83d\udcb8",
+        "role_id": 834703025632313435,
+        "emoji": "\ud83d\udd34",
+        "message_id": 834717256885338122
+    },
+    {
+        "role_name": "Nairobi \ud83d\udcb0",
+        "role_id": 834703027235586069,
+        "emoji": "\ud83d\udcb0",
+        "message_id": 834717349152030740
+    },
+    {
+        "role_name": "Tokyo \ud83d\udcb8",
+        "role_id": 834703028736753713,
+        "emoji": "\ud83d\udcb8",
+        "message_id": 834717532031156244
+    },
+    {
+        "role_name": "Rio \ud83d\udcb0",
+        "role_id": 834703552701792286,
+        "emoji": "\ud83d\udcbb",
+        "message_id": 834718505395814421
+    },
+    {
+        "role_name": "Denver \ud83d\udcb8",
+        "role_id": 834703552723025970,
+        "emoji": "\ud83d\udcaa",
+        "message_id": 834718852424269854
+    },
+    {
+        "role_name": "Moscow \ud83d\udcb0",
+        "role_id": 834703697165942795,
+        "emoji": "\ud83d\udd30",
+        "message_id": 834719181504905247
+    },
+    {
+        "role_name": "Bogot\u00e1 \ud83d\udcb8",
+        "role_id": 834703696721084416,
+        "emoji": "\u2665\ufe0f",
+        "message_id": 834719353017991188
+    },
+    {
+        "role_name": "Stockholm \ud83d\udcb0",
+        "role_id": 834703555025698826,
+        "emoji": "\ud83d\udc9f",
+        "message_id": 834719573105704961
+    },
+    {
+        "role_name": "Berlin \ud83d\udcb8",
+        "role_id": 834703555063447562,
+        "emoji": "\ud83d\udd34",
+        "message_id": 834719736603475988
+    },
+    {
+        "role_name": "Palermo \ud83d\udcb0",
+        "role_id": 834704989011574784,
+        "emoji": "\ud83d\udfe0",
+        "message_id": 834720116389314600
+    },
+    {
+        "role_name": "asd",
+        "role_id": 827104425742172180,
+        "emoji": "<a:nyers:826832117916368896>",
+        "message_id": 835126333247324200
+    },
+    {
+        "role_name": "asd",
+        "role_id": 827104425742172180,
+        "emoji": "<a:nyers:826832117916368896>",
+        "message_id": 835126417662410752
+    },
+    {
+        "role_name": "\ud83c\udf89\u2502Giveaway ping",
+        "role_id": 834419475016187954,
+        "emoji": "\ud83d\udc4b",
+        "message_id": 835222298142965820
+    },
+    {
+        "role_name": "\ud83d\udcf0\u2502news ping",
+        "role_id": 834419475053936696,
+        "emoji": "\u2705",
+        "message_id": 835222389712617482
+    },
+    {
+        "role_name": "\ud83d\udd30\u2502partners ping",
+        "role_id": 834419478275817532,
+        "emoji": "\ud83d\ude02",
+        "message_id": 835222612342210600
+    },
+    {
+        "role_name": "le\u00e1ll\u00e1s ping",
+        "role_id": 835240359402536990,
+        "emoji": "\ud83c\uddf1",
+        "message_id": 835240930108899338
+    },
+    {
+        "role_name": "\u3014\ud83c\udfae\u3015Minecraft player",
+        "role_id": 835426968656805899,
+        "emoji": "<:KEKW:835168264769634364>",
+        "message_id": 835429447339474964
+    },
+    {
+        "role_name": "\u3014\ud83c\udfae\u3015Brawl Stars player",
+        "role_id": 835427445271953429,
+        "emoji": "\ud83c\uddf4",
+        "message_id": 835429578059022376
+    },
+    {
+        "role_name": "\u3014\ud83c\udfae\u3015Valorant Player",
+        "role_id": 835428159738216450,
+        "emoji": "\ud83e\udd14",
+        "message_id": 835429718228205578
+    },
+    {
+        "role_name": "\u3014\ud83c\udfae\u3015GTA player",
+        "role_id": 835427444478967829,
+        "emoji": "\u2764\ufe0f",
+        "message_id": 835429850268303370
+    },
+    {
+        "role_name": "\u3014\ud83c\udfae\u3015Fortnite player",
+        "role_id": 835427437521272903,
+        "emoji": "\ud83d\udfe2",
+        "message_id": 835429936457449492
+    },
+    {
+        "role_name": "Apex Legends",
+        "role_id": 835901085910433823,
+        "emoji": "\u2705",
+        "message_id": 835901301799649381
+    },
+    {
+        "role_name": "9",
+        "role_id": 835904256506462219,
+        "emoji": "\u2705",
+        "message_id": 835904424425685063
+    },
+    {
+        "role_name": "szvaz\u00e1s ping",
+        "role_id": 835976062092705852,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 835978373741805609
+    },
+    {
+        "role_name": "Partner Inf\u00f3k",
+        "role_id": 805902981861867551,
+        "emoji": "\u2705",
+        "message_id": 836328294566854667
+    },
+    {
+        "role_name": "Mc Inf\u00f3k",
+        "role_id": 805903889731813436,
+        "emoji": "\u2705",
+        "message_id": 836894426633994301
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 839028996817289238,
+        "emoji": "\u2611\ufe0f",
+        "message_id": 839061173173092393
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 834490544502865920,
+        "emoji": "\u2705",
+        "message_id": 839088291965829130
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 834490544502865920,
+        "emoji": "\u2705",
+        "message_id": 839088359237222432
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 834490544502865920,
+        "emoji": "<:radon_pipa:811191514369753149>",
+        "message_id": 839088657825660950
+    },
+    {
+        "role_name": "V\u00f6r\u00f6s",
+        "role_id": 839379249256988674,
+        "emoji": "\ud83d\udd34",
+        "message_id": 839384185395347476
+    },
+    {
+        "role_name": "K\u00e9k",
+        "role_id": 839379326276206603,
+        "emoji": "\ud83d\udd35",
+        "message_id": 839384286939054121
+    },
+    {
+        "role_name": "Z\u00f6ld",
+        "role_id": 839379553726103573,
+        "emoji": "\ud83d\udfe2",
+        "message_id": 839384427268538399
+    },
+    {
+        "role_name": "S\u00e1rga",
+        "role_id": 839379702900064256,
+        "emoji": "\ud83d\udfe1",
+        "message_id": 839384578480930837
+    },
+    {
+        "role_name": "T\u00fcrkizk\u00e9k",
+        "role_id": 839379773162782720,
+        "emoji": "\ud83d\udfe6",
+        "message_id": 839384900527456277
+    },
+    {
+        "role_name": "Fekete",
+        "role_id": 839379378014126100,
+        "emoji": "\u26ab",
+        "message_id": 839385039980724254
+    },
+    {
+        "role_name": "Inf\u00f3k",
+        "role_id": 839447526468747284,
+        "emoji": "\ud83d\udce2",
+        "message_id": 839447772373843989
+    },
+    {
+        "role_name": "Fejleszt\u00e9sek",
+        "role_id": 839447641368297472,
+        "emoji": "\ud83d\udcd1",
+        "message_id": 839447850952818690
+    },
+    {
+        "role_name": "YouTube",
+        "role_id": 839447605742272542,
+        "emoji": "\ud83c\udfa5",
+        "message_id": 839447940510121994
+    },
+    {
+        "role_name": "Radon",
+        "role_id": 839447567119941642,
+        "emoji": "\ud83e\uddea",
+        "message_id": 839448175227699221
+    },
+    {
+        "role_name": "Member",
+        "role_id": 840140926592090153,
+        "emoji": "\u2705",
+        "message_id": 840992745304227860
+    },
+    {
+        "role_name": "Member",
+        "role_id": 840140926592090153,
+        "emoji": "\u2705",
+        "message_id": 840992782444396584
+    },
+    {
+        "role_name": "Netflix",
+        "role_id": 841023249337024582,
+        "emoji": "\ud83d\udd34",
+        "message_id": 841024220934701096
+    },
+    {
+        "role_name": "HBO GO",
+        "role_id": 841023250770690098,
+        "emoji": "\u26ab",
+        "message_id": 841024375171711036
+    },
+    {
+        "role_name": "PS4",
+        "role_id": 841022972679553045,
+        "emoji": "\ud83d\udc99",
+        "message_id": 841024434881691688
+    },
+    {
+        "role_name": "XBOX",
+        "role_id": 841022973455892490,
+        "emoji": "\ud83d\udc9a",
+        "message_id": 841024519442792468
+    },
+    {
+        "role_name": "Girl",
+        "role_id": 841022971065925652,
+        "emoji": "\ud83d\udfe3",
+        "message_id": 841024791888265246
+    },
+    {
+        "role_name": "Boy",
+        "role_id": 841022969266569216,
+        "emoji": "\ud83d\udd35",
+        "message_id": 841024891196276787
+    },
+    {
+        "role_name": "PC",
+        "role_id": 841022971857600594,
+        "emoji": "\ud83d\udcbb",
+        "message_id": 841025026425225326
+    },
+    {
+        "role_name": "Android",
+        "role_id": 841022974550343730,
+        "emoji": "\ud83c\udd70",
+        "message_id": 841025236577026089
+    },
+    {
+        "role_name": "IOS",
+        "role_id": 841022974873567262,
+        "emoji": "\ud83c\udd94",
+        "message_id": 841025337546375210
+    },
+    {
+        "role_name": "Dog \ud83d\udc15\u200d\ud83e\uddba",
+        "role_id": 841022976484180048,
+        "emoji": "\ud83d\udc15\u200d\ud83e\uddba",
+        "message_id": 841025509801328660
+    },
+    {
+        "role_name": "Cat \ud83d\udc08",
+        "role_id": 841023248657023008,
+        "emoji": "\ud83d\udc08",
+        "message_id": 841025654153281646
+    },
+    {
+        "role_name": "Cloud inf\u00f3",
+        "role_id": 840332125344366603,
+        "emoji": "\ud83d\udd11",
+        "message_id": 841041129155067954
+    },
+    {
+        "role_name": "Partner inf\u00f3",
+        "role_id": 840332176473587732,
+        "emoji": "\ud83e\udd1d",
+        "message_id": 841398586611728414
+    },
+    {
+        "role_name": "FOUNDER",
+        "role_id": 836626001671880784,
+        "emoji": "\ud83e\uddaf",
+        "message_id": 841724195583033355
+    },
+    {
+        "role_name": "ADMIN+",
+        "role_id": 839169341290840124,
+        "emoji": "\ud83c\udf53",
+        "message_id": 841724476256419872
+    },
+    {
+        "role_name": "=Tag=",
+        "role_id": 842836157569957968,
+        "emoji": "\u2705",
+        "message_id": 842840902489079909
+    },
+    {
+        "role_name": "\ud83e\udd70\u2502Anime fan",
+        "role_id": 843079758736392202,
+        "emoji": "<:WOW:835168193365540894>",
+        "message_id": 843104601531219978
+    },
+    {
+        "role_name": "\ud83d\udc36\u2502Dog",
+        "role_id": 843103584346439680,
+        "emoji": "\ud83d\udc15\u200d\ud83e\uddba",
+        "message_id": 843105109247918100
+    },
+    {
+        "role_name": "\ud83d\udc31\u2502cat",
+        "role_id": 843103591463518258,
+        "emoji": "\ud83d\udc08",
+        "message_id": 843105234149572608
+    },
+    {
+        "role_name": "[giveaway ping]",
+        "role_id": 845573023334400042,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 845580550831472670
+    },
+    {
+        "role_name": "[szavaz\u00e1s ping]",
+        "role_id": 845603954573705257,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 845604669203677205
+    },
+    {
+        "role_name": "[event ping]",
+        "role_id": 845604438302392392,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 845604843498110986
+    },
+    {
+        "role_name": "[nyerem\u00e9nyj\u00e1t\u00e9k ping]",
+        "role_id": 845573023334400042,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 845604982748217345
+    },
+    {
+        "role_name": "[friss\u00edt\u00e9s ping]",
+        "role_id": 804789847704731659,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 845605224642904074
+    },
+    {
+        "role_name": "Fan",
+        "role_id": 819315045870600242,
+        "emoji": "\u2705",
+        "message_id": 845618552882593802
+    },
+    {
+        "role_name": "Minecraft",
+        "role_id": 846054569343057980,
+        "emoji": "<:mc:846069904699818036>",
+        "message_id": 846070156160663613
+    },
+    {
+        "role_name": "Streaming ping",
+        "role_id": 847148003193651271,
+        "emoji": "\u2705",
+        "message_id": 847148162020147211
+    },
+    {
+        "role_name": "Member",
+        "role_id": 840140926592090153,
+        "emoji": "\u2705",
+        "message_id": 848184296668790864
+    },
+    {
+        "role_name": "=\ud83c\udfa5=",
+        "role_id": 848300611439165461,
+        "emoji": "\ud83d\udcf9",
+        "message_id": 848301059235381278
+    },
+    {
+        "role_name": "=\ud83d\udee0\ufe0f=",
+        "role_id": 848300681286385664,
+        "emoji": "\ud83d\udee0\ufe0f",
+        "message_id": 848301302483386368
+    },
+    {
+        "role_name": "=\ud83d\udee0\ufe0f=",
+        "role_id": 848300681286385664,
+        "emoji": "\ud83d\udee0\ufe0f",
+        "message_id": 848301357529038918
+    },
+    {
+        "role_name": "=\ud83c\udfa5=",
+        "role_id": 848300611439165461,
+        "emoji": "\ud83c\udfa5",
+        "message_id": 848301593119031316
+    },
+    {
+        "role_name": "\ud83d\ude00| Blog ping",
+        "role_id": 848533892738449478,
+        "emoji": "\ud83d\uddde\ufe0f",
+        "message_id": 848534013706108928
+    },
+    {
+        "role_name": "\u300c\ud83d\udc64\u300dFelhaszn\u00e1l\u00f3",
+        "role_id": 806242050973761596,
+        "emoji": "\ud83d\ude0e",
+        "message_id": 848938802885034045
+    },
+    {
+        "role_name": "\u300c\ud83d\udc64\u300dFelhaszn\u00e1l\u00f3",
+        "role_id": 806242050973761596,
+        "emoji": "\ud83d\ude0e",
+        "message_id": 848940054482124841
+    },
+    {
+        "role_name": "\u00c1llapot inf\u00f3",
+        "role_id": 848992871310426192,
+        "emoji": "\ud83d\udee0\ufe0f",
+        "message_id": 848993150923046942
+    },
+    {
+        "role_name": "Member",
+        "role_id": 849305740975538196,
+        "emoji": "\u2705",
+        "message_id": 849309327461318657
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 850817458114002955,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 851157870896349256
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 850817458114002955,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 851158069459157082
+    },
+    {
+        "role_name": "[friss\u00edt\u00e9s ping]",
+        "role_id": 804789847704731659,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 853183589062934558
+    },
+    {
+        "role_name": "[nyerem\u00e9nyj\u00e1t\u00e9k ping]",
+        "role_id": 845573023334400042,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 853184595578322955
+    },
+    {
+        "role_name": "[friss\u00edt\u00e9s ping]",
+        "role_id": 804789847704731659,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 853184739803398144
+    },
+    {
+        "role_name": "[event ping]",
+        "role_id": 845604438302392392,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 853184948827324436
+    },
+    {
+        "role_name": "[szavaz\u00e1s ping]",
+        "role_id": 845603954573705257,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 853185039956574218
+    },
+    {
+        "role_name": "\u2734 \u22b6\u25ac\u25ac\u22b6\u25acSzintek\u25ac\u22b7\u25ac\u25ac\u22b7 \u2734",
+        "role_id": 853240397903167503,
+        "emoji": "\ud83d\udcd9",
+        "message_id": 853321170699157536
+    },
+    {
+        "role_name": "\u2734 \u22b6\u25ac\u25ac\u22b6\u25acK\u00f6z\u00f6ss\u00e9g\u0171 Rangok\u25ac\u22b7\u25ac\u25ac\u22b7 \u2734",
+        "role_id": 853240397921124361,
+        "emoji": "\ud83d\udcd8",
+        "message_id": 853321551838576665
+    },
+    {
+        "role_name": "\u2734 \u22b6\u25ac\u25ac\u22b6\u25acSpeci\u00e1lis Rangok\u25ac\u22b7\u25ac\u25ac\u22b7 \u2734",
+        "role_id": 853240397921124358,
+        "emoji": "\ud83d\udcd5",
+        "message_id": 853321817434357810
+    },
+    {
+        "role_name": "\u2734 \u22b6\u25ac\u25ac\u22b6\u25acSpeci\u00e1lis Rangok\u25ac\u22b7\u25ac\u25ac\u22b7 \u2734",
+        "role_id": 853240397921124358,
+        "emoji": "\ud83d\udcd8",
+        "message_id": 853322461268279297
+    },
+    {
+        "role_name": "\u3014\ud83d\udd1e\u301518 \u00e9ves elm\u00faltam",
+        "role_id": 848916921016778783,
+        "emoji": "\ud83d\udd1e",
+        "message_id": 853553582044610570
+    },
+    {
+        "role_name": "[h\u00edr ping]",
+        "role_id": 853589797423415297,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 853590295686021182
+    },
+    {
+        "role_name": "\u3014\ud83d\udd34\u3015Piros",
+        "role_id": 854633873215062037,
+        "emoji": "\ud83d\udd34",
+        "message_id": 854635781364514856
+    },
+    {
+        "role_name": "\u3014\ud83d\udfe2\u3015Z\u00f6ld",
+        "role_id": 854634097359716362,
+        "emoji": "\ud83d\udfe2",
+        "message_id": 854635942714408990
+    },
+    {
+        "role_name": "\u3014\ud83d\udd35\u3015K\u00e9k",
+        "role_id": 854634098034999296,
+        "emoji": "\ud83d\udd35",
+        "message_id": 854636060520611860
+    },
+    {
+        "role_name": "\u3014\ud83d\udfe1\u3015S\u00e1rga",
+        "role_id": 854634096268279818,
+        "emoji": "\ud83d\udfe1",
+        "message_id": 854636286551392266
+    },
+    {
+        "role_name": "\u3014\ud83d\udfe4\u3015Barna",
+        "role_id": 854634645965504513,
+        "emoji": "\ud83d\udfe4",
+        "message_id": 854636433917739051
+    },
+    {
+        "role_name": "\u3014\u26aa\u3015Feh\u00e9r",
+        "role_id": 854634828535038013,
+        "emoji": "\u26aa",
+        "message_id": 854636570728464384
+    },
+    {
+        "role_name": "\u3014\ud83d\udfe3\u3015Lila",
+        "role_id": 854635206375899157,
+        "emoji": "\ud83d\udfe3",
+        "message_id": 854636697228148756
+    },
+    {
+        "role_name": "\u3014\u26ab\u3015Fekete",
+        "role_id": 854634829337329675,
+        "emoji": "\u26ab",
+        "message_id": 854636864099450891
+    },
+    {
+        "role_name": "Tag",
+        "role_id": 856272400038363157,
+        "emoji": "\u2705",
+        "message_id": 856405295437840384
+    },
+    {
+        "role_name": "Le\u00e1ll\u00e1s ping",
+        "role_id": 858049751131750460,
+        "emoji": "\u2705",
+        "message_id": 858049924649451560
+    },
+    {
+        "role_name": "Partner ping",
+        "role_id": 858049682986893323,
+        "emoji": "\u2705",
+        "message_id": 858049987661529159
+    },
+    {
+        "role_name": "Changelog ping",
+        "role_id": 858049628884959252,
+        "emoji": "\u2705",
+        "message_id": 858050076555345970
+    },
+    {
+        "role_name": "Changelog ping",
+        "role_id": 858049628884959252,
+        "emoji": "\u2705",
+        "message_id": 858052431505784843
+    },
+    {
+        "role_name": "Sz\u00ednv\u00e1lt\u00f3s rang",
+        "role_id": 862742100659535872,
+        "emoji": "\u2705",
+        "message_id": 862743538010030090
+    },
+    {
+        "role_name": "Sz\u00ednv\u00e1lt\u00f3s rang",
+        "role_id": 862742100659535872,
+        "emoji": "\u2705",
+        "message_id": 862743892205895730
+    },
+    {
+        "role_name": "Multivitamin",
+        "role_id": 863282316900958209,
+        "emoji": "\u2705",
+        "message_id": 863283790909931531
+    },
+    {
+        "role_name": "Voice",
+        "role_id": 863402451314540544,
+        "emoji": "\u2705",
+        "message_id": 863403174491586580
+    },
+    {
+        "role_name": "MultiVitamin",
+        "role_id": 862742100659535872,
+        "emoji": "\u2705",
+        "message_id": 863757866526965760
+    },
+    {
+        "role_name": "Voice",
+        "role_id": 863402451314540544,
+        "emoji": "\u2705",
+        "message_id": 863758110039736320
+    },
+    {
+        "role_name": "\u3021\ud83c\udf51\u3021\ud835\udc0c\ud835\udc1e\ud835\udc26\ud835\udc1b\ud835\udc1e\ud835\udc2b",
+        "role_id": 817025804512133121,
+        "emoji": "\u2705",
+        "message_id": 864118427785625610
+    },
+    {
+        "role_name": "\ud835\udc0f\ud835\udc21\ud835\udc1a\ud835\udc2c\ud835\udc26\ud835\udc28\ud835\udc29\ud835\udc21\ud835\udc28\ud835\udc1b\ud835\udc22\ud835\udc1a",
+        "role_id": 864157983541559336,
+        "emoji": "\u2705",
+        "message_id": 864158368206028840
+    },
+    {
+        "role_name": "Community Ping",
+        "role_id": 864219005450977301,
+        "emoji": "\u2705",
+        "message_id": 864220014743519243
+    },
+    {
+        "role_name": "live ping",
+        "role_id": 865509243918352386,
+        "emoji": "\ud83d\udcaf",
+        "message_id": 865509526593208331
+    },
+    {
+        "role_name": "h\u00edrek-ping",
+        "role_id": 859411098789085204,
+        "emoji": "\ud83d\uddde\ufe0f",
+        "message_id": 865509637445124117
+    },
+    {
+        "role_name": "partner-ping",
+        "role_id": 859411098059276298,
+        "emoji": "\ud83e\udd1d",
+        "message_id": 865509778356961280
+    },
+    {
+        "role_name": "Dand\u00e1rt\u00e1bornok",
+        "role_id": 866453460772585483,
+        "emoji": "<:2412202:866437524762263563>",
+        "message_id": 867195148094275655
+    },
+    {
+        "role_name": "Bajnok",
+        "role_id": 866057822851301406,
+        "emoji": "\ud83d\udcaa",
+        "message_id": 867330206766727168
+    },
+    {
+        "role_name": "Vez\u00e9rezredes",
+        "role_id": 866454218423795793,
+        "emoji": "<:pepega:866438290856083466>",
+        "message_id": 867746614565928990
+    },
+    {
+        "role_name": "Kortdex",
+        "role_id": 867787049365274655,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 867787832089378846
+    },
+    {
+        "role_name": "Kortdex",
+        "role_id": 867787049365274655,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 867788151850401802
+    },
+    {
+        "role_name": "Picnode",
+        "role_id": 867787404088967188,
+        "emoji": "\ud83d\udc4d",
+        "message_id": 867788339520077824
+    },
+    {
+        "role_name": "Server ping",
+        "role_id": 867815006673961000,
+        "emoji": "<:sg:829951835917123614>",
+        "message_id": 867815206390595594
+    },
+    {
+        "role_name": "Hallgat\u00f3",
+        "role_id": 867865074848759868,
+        "emoji": "<:radon_check:856423841612824607>",
+        "message_id": 867871621712314408
+    },
+    {
+        "role_name": "Hallgat\u00f3",
+        "role_id": 867865074848759868,
+        "emoji": "\u2705",
+        "message_id": 867872011131551775
+    },
+    {
+        "role_name": "Hallgat\u00f3",
+        "role_id": 867865074848759868,
+        "emoji": "<:radon_check:856423841612824607>",
+        "message_id": 867872267950489671
+    },
+    {
+        "role_name": "Hallgat\u00f3",
+        "role_id": 867865074848759868,
+        "emoji": "\u2705",
+        "message_id": 867872352758398986
+    },
+    {
+        "role_name": "Felh\u00edv\u00e1s ping",
+        "role_id": 868883814884192327,
+        "emoji": "\u26aa",
+        "message_id": 868889894301364264
+    },
+    {
+        "role_name": "szerver ping",
+        "role_id": 870377379074297896,
+        "emoji": "\ud83d\udcbb",
+        "message_id": 870377752971321354
+    },
+    {
+        "role_name": "[\ud83d\udc1d] Tag",
+        "role_id": 857112224955236372,
+        "emoji": "\u2705",
+        "message_id": 870657353278709841
+    },
+    {
+        "role_name": "\u00faj rang",
+        "role_id": 871396484103430184,
+        "emoji": "\ud83c\udf1e",
+        "message_id": 871396527455731752
+    },
+    {
+        "role_name": "Partner Ping",
+        "role_id": 866782051402907718,
+        "emoji": "\ud83e\udd1d",
+        "message_id": 871493474371903549
+    },
+    {
+        "role_name": "\u00daj Poszt Ping",
+        "role_id": 866782086579617812,
+        "emoji": "<:picnode_memes:866984973512081448>",
+        "message_id": 871493716093841489
+    },
+    {
+        "role_name": "Inf\u00f3 ping",
+        "role_id": 871130083333648385,
+        "emoji": "\ud83d\udce2",
+        "message_id": 871494083909140531
+    },
+    {
+        "role_name": "Giveaway ping",
+        "role_id": 871130153554686003,
+        "emoji": "\ud83c\udf89",
+        "message_id": 871494290646396969
+    },
+    {
+        "role_name": "\u2394 Jobb\u00e1gy",
+        "role_id": 868188715065938010,
+        "emoji": "<:FagyiBociSzem:875701148089221150>",
+        "message_id": 875750222926610462
+    },
+    {
+        "role_name": "\u2394 Jobb\u00e1gy",
+        "role_id": 868188715065938010,
+        "emoji": "<:FagyiBociSzem:875701148089221150>",
+        "message_id": 875750523523981432
+    },
+    {
+        "role_name": "\u2394 Jobb\u00e1gy",
+        "role_id": 868188715065938010,
+        "emoji": "<:FagyiBociSzem:875701148089221150>",
+        "message_id": 875750762494427138
+    },
+    {
+        "role_name": "\u2651\ufe0e Bak",
+        "role_id": 871825683440103435,
+        "emoji": "\u2764\ufe0f",
+        "message_id": 875750947861716993
+    },
+    {
+        "role_name": "\u25c8 Adminok",
+        "role_id": 868224714936578048,
+        "emoji": "\ud83d\udc99",
+        "message_id": 876364742296469514
+    },
+    {
+        "role_name": "\u25c8 Adminok",
+        "role_id": 868224714936578048,
+        "emoji": "\ud83d\udc99",
+        "message_id": 876364906520248331
+    },
+    {
+        "role_name": "Webodal fejleszt\u00e9s",
+        "role_id": 876860462912917584,
+        "emoji": "\ud83c\udf10",
+        "message_id": 876862244795858954
+    },
+    {
+        "role_name": "\ud83e\udde1\u2502Floppa",
+        "role_id": 877610533279383563,
+        "emoji": "\ud83d\udd22",
+        "message_id": 877653693326041118
+    },
+    {
+        "role_name": "\ud83e\udde1\u2502Floppa",
+        "role_id": 877610533279383563,
+        "emoji": "\ud83d\ude3a",
+        "message_id": 877825601816371220
+    },
+    {
+        "role_name": "\ud83d\udcd9\u2502H\u00edrek ping",
+        "role_id": 878567411576606741,
+        "emoji": "\ud83d\udcd9",
+        "message_id": 878569106268373022
+    },
+    {
+        "role_name": "\ud83c\udf89\u2502Nyerem\u00e9nyj\u00e1t\u00e9k ping",
+        "role_id": 878567625389662239,
+        "emoji": "\ud83c\udf89",
+        "message_id": 878569289853071360
+    },
+    {
+        "role_name": "\u300e\u2753\u300fotd ping",
+        "role_id": 878652012173090906,
+        "emoji": "\u2705",
+        "message_id": 878652360010903592
+    },
+    {
+        "role_name": "\u30fbH\u00edrek Megjel\u00f6l\u00e9s",
+        "role_id": 872227424459444226,
+        "emoji": "\ud83d\udccc",
+        "message_id": 879442690763288626
+    },
+    {
+        "role_name": "\u30fbNyerem\u00e9nyj\u00e1t\u00e9k Megjel\u00f6l\u00e9s",
+        "role_id": 872227425730326578,
+        "emoji": "\ud83d\udccc",
+        "message_id": 879443226040336526
+    },
+    {
+        "role_name": "\u30fbNyerem\u00e9nyj\u00e1t\u00e9k Megjel\u00f6l\u00e9s",
+        "role_id": 872227425730326578,
+        "emoji": "\ud83c\udf81",
+        "message_id": 879443335348117535
+    },
+    {
+        "role_name": "\u30fbPartner Megjel\u00f6l\u00e9s",
+        "role_id": 872227424014835712,
+        "emoji": "\ud83e\udd1d",
+        "message_id": 879443660658327623
+    },
+    {
+        "role_name": "\ud83e\udd14\u2502F/Qotd ping",
+        "role_id": 878568160767385600,
+        "emoji": "\ud83e\udd14",
+        "message_id": 880170172814594079
+    }
+]
